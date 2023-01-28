@@ -64,6 +64,7 @@ class RlcCircuitSim:
                     l_voltage = np.array(analysis["n2"])
             else:
                 if self.capacitance != 0:
+                    r_voltage = np.array(analysis["n1"]) - np.array(analysis["n2"])
                     c_voltage = np.array(analysis["n2"])
                 else:
                     r_voltage = np.array(analysis["n1"])
